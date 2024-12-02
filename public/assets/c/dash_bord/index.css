@@ -1,0 +1,493 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: sans-serif;
+}
+body {
+  background-color: #001;
+  display: flex;
+}
+.img-box {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid white;
+  flex-shrink: 0;
+}
+.img-box img {
+  width: 100%;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.profile h2 {
+  font-size: 15px;
+  text-transform: capitalize;
+}
+.menu {
+  background-color: #123;
+  width: 60px;
+  height: 100vh;
+  padding: 20px;
+  overflow: hidden;
+  transition: 0.4s;
+}
+.menu:hover {
+  width: 260px;
+}
+ul {
+  list-style: none;
+  position: relative;
+  height: 100%;
+}
+ul li a {
+  display: block;
+  text-decoration: none;
+
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  transition: 0.5s;
+}
+ul li a:hover,
+.active,
+.data-info .box:hover,
+td:hover {
+  background-color: #ffffff55;
+}
+.log-out {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.log-out a {
+  background-color: #a00;
+}
+ul li a i {
+  font-size: 30px;
+}
+
+.content {
+  background-color: rgb(21, 20, 20);
+  width: 100%;
+}
+.title-info {
+  background-color: #0481ff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.data-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+}
+.data-info .box {
+  background-color: #123;
+  height: 150px;
+  flex-basis: 150px;
+  flex-grow: 1;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.data-info .box i {
+  font-size: 40px;
+}
+.data-info .box .data {
+  text-align: center;
+}
+.data-info .box span {
+  font-size: 30px;
+}
+table {
+  width: 100%;
+  text-align: center;
+  border-spacing: 8px;
+}
+td,
+th {
+  background-color: #123;
+  height: 40px;
+  border-radius: 8px;
+}
+th {
+  background-color: #0080ff;
+}
+.price .count {
+  padding: 6px;
+  border-radius: 6px;
+}
+.price {
+  background-color: green;
+}
+.count {
+  background-color: gold;
+  color: black;
+}
+
+/* ............... */
+.add-products {
+  /* background-color: rgb(43, 13, 197); */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.add-products form {
+  width: 60%;
+  background-color: #123;
+  padding: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.add-product-word {
+  text-align: center;
+  font-size: 25px;
+  margin: 10px;
+}
+
+.add-products form .flex {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.add-products form .flex .inputBox {
+  flex: 1 1 25rem;
+}
+
+.btn-add-product {
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  background-color: #9c9ce3;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.btn-add-product:hover {
+  background-color: #0080ff;
+}
+.add-products form span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  /* color: var(--light-color); */
+  color: white;
+}
+
+.add-products form .box {
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  padding: 1.4rem;
+  width: 80%;
+  height: 1rem;
+  color: white;
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+
+.add-products form textarea {
+  width: 300px;
+  height: 70px;
+  font-size: 15px;
+  color: #001;
+  font-weight: bold;
+  border-radius: 5px;
+  resize: none;
+}
+
+/*  products added  */
+
+.heading {
+  font-size: 1.5rem;
+  color: var(--black);
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.flex-btn {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+.flex-btn a {
+  text-decoration: none;
+  background-color: #9c9ce3;
+  width: 150px;
+  height: 40px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.flex-btn a:hover {
+  background-color: #0080ff;
+}
+
+.show-products .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 33rem);
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #123;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.show-products .box-container .box {
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+  border: var(--border);
+  padding: 2rem;
+}
+
+.show-products .box-container .box img {
+  width: 100%;
+  height: 20rem;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+}
+
+.show-products .box-container .box .name {
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.show-products .box-container .box .price {
+  font-size: 2rem;
+  color: var(--main-color);
+  margin: 0.5rem 0;
+}
+
+.show-products .box-container .box .details {
+  font-size: 1.5rem;
+  color: var(--light-color);
+  line-height: 2;
+}
+
+/* 0000000000  update product */
+
+.update-product form {
+  background-color: #123;
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+  border: var(--border);
+  padding: 2rem;
+  max-width: 40rem;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  width: 70%;
+}
+
+.update-product form .image-container {
+  margin-bottom: 2rem;
+}
+
+.update-product form .image-container .main-image img {
+  height: 15rem;
+  width: 100%;
+  object-fit: contain;
+}
+
+.update-product form .image-container .sub-image {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.update-product form .image-container .sub-image img {
+  height: 5rem;
+  width: 7rem;
+  object-fit: contain;
+  padding: 0.5rem;
+  border: var(--border);
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+.update-product form .image-container .sub-image img:hover {
+  transform: scale(1.1);
+}
+
+.update-product form .box {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  border-radius: 0.5rem;
+  padding: 1.4rem;
+  font-size: 1.8rem;
+  color: var(--black);
+  background-color: var(--light-bg);
+  margin: 1rem 0;
+}
+
+.update-product form span {
+  font-size: 1.7rem;
+  color: white;
+}
+
+.update-product form textarea {
+  height: 15rem;
+  resize: none;
+}
+
+.flex-btn input {
+  background-color: #9c9ce3;
+  width: 150px;
+  height: 40px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+.flex-btn input:hover {
+  background-color: #0080ff;
+}
+
+.new-admin-box-content {
+  /* background-color: #a00; */
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 20px;
+}
+.new-admin-box-content .new-admin-box {
+  /* background-color: red; */
+  width: 300px;
+  height: 120px;
+  border-radius: 8px;
+  border: solid 5px white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.new-admin-box-content .new-admin-box h2 {
+  text-align: center;
+}
+.new-admin-box-content .new-admin-box a {
+  background-color: #9c9ce3;
+  width: 250px;
+  height: 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+}
+
+.new-admin-box-content .admins-box {
+  width: 300px;
+  height: 140px;
+  border-radius: 8px;
+  border: solid 5px white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.new-admin-box-content .admins-box .butt {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.new-admin-box-content .admins-box .butt a {
+  background-color: #9c9ce3;
+  width: 40%;
+  height: 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.new-admin-box-content a:hover {
+  background-color: #0080ff;
+}
+.new-admin-box-content .butt a:hover {
+  background-color: #0080ff;
+}
+
+/* 000000000000000000000 */
+/* update admin profile */
+/* 0000000000000000000 */
+.update-admin-profile {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  /* background-color: red; */
+  height: 100vh;
+  margin: auto;
+}
+.update-admin-profile form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 80%;
+  height: 60vh;
+  margin: auto;
+  background-color: #123;
+  border-radius: 8px;
+}
+.update-admin-profile form h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.update-admin-profile form input {
+  height: 50px;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 20px;
+  color: #001;
+  border: none;
+}
+.update-admin-profile form .Update-Now-butt {
+  background-color: #9c9ce3;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+.update-admin-profile form .Update-Now-butt:hover {
+  background-color: #0481ff;
+}

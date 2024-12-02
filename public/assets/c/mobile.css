@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: max-content;
+}
+.header .logo {
+  display: flex;
+  width: 100vh;
+  justify-content: center;
+}
+.header form {
+  display: flex;
+  width: 50vh;
+  justify-content: center;
+}
+
+.header ul {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-items: center; */
+}
+.form-container form {
+  padding: 10px;
+  width: 80%;
+  height: 80vh;
+  background-color: #efef16;
+  /* position: absolute; */
+  /* transform: translate(-50%, -50%); */
+  top: 10vh;
+  left: 10%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 20px #100606;
+}
+.header ul {
+  display: none;
+}

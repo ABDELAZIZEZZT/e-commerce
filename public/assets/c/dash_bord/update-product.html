@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>dash bord</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="menu">
+      <ul>
+        <li class="profile">
+          <h2>abdelaziz</h2>
+        </li>
+        <li>
+          <a class="active" href="">
+            <i class="fas fa-home"></i>
+            <p>Dash Bord</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fas fa-user-group"></i>
+            <p>Clients</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fas fa-table"></i>
+            <p>Products</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fas fa-chart-pie"></i>
+            <p>Admins</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fas fa-pen"></i>
+            <p>Orders</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fas fa-message"></i>
+            <p>Messages</p>
+          </a>
+        </li>
+        <!-- <li>
+          <a href="">
+            <i class="fas fa-cog"></i>
+            <p>Settings</p>
+          </a>
+        </li> -->
+
+        <li class="log-out">
+          <a href="">
+            <i class="fas fa-sign-out"></i>
+            <p>log out</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <section class="update-product">
+        <h1 class="heading">Update Product</h1>
+
+        <form action="" method="post" enctype="multipart/form-data">
+          <div class="image-container">
+            <div class="main-image">
+              <img class="main-image-product" src="image/watch-1.webp" alt="" />
+            </div>
+            <div class="sub-image">
+              <img
+                onclick="changeProduct(this.src)"
+                src="image/watch-1.webp"
+                alt=""
+              />
+              <img
+                onclick="changeProduct(this.src)"
+                src="image/watch-2.webp"
+                alt=""
+              />
+              <img
+                onclick="changeProduct(this.src)"
+                src="image/watch-3.webp"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <span>Update Name</span>
+          <input
+            type="text"
+            name="name"
+            required=""
+            class="box"
+            maxlength="100"
+            placeholder="enter product name"
+            value="iwatch"
+            fdprocessedid="j9w7hm"
+          />
+          <span>Update Price</span>
+          <input
+            type="number"
+            name="price"
+            required=""
+            class="box"
+            min="0"
+            max="9999999999"
+            placeholder="enter product price"
+            onkeypress="if(this.value.length == 10) return false;"
+            value="500"
+            fdprocessedid="nqokq"
+          />
+          <span>Update Details</span>
+          <textarea name="details" class="box" required="" cols="30" rows="10">
+iwatch it very good</textarea
+          >
+          <span>Update image 01</span>
+          <input
+            type="file"
+            name="image_01"
+            accept="image/jpg, image/jpeg, image/png, image/webp"
+            class="box"
+          />
+          <span>Update image 02</span>
+          <input
+            type="file"
+            name="image_02"
+            accept="image/jpg, image/jpeg, image/png, image/webp"
+            class="box"
+          />
+          <span>Update image 03</span>
+          <input
+            type="file"
+            name="image_03"
+            accept="image/jpg, image/jpeg, image/png, image/webp"
+            class="box"
+          />
+          <div class="flex-btn">
+            <input
+              type="submit"
+              name="update"
+              class="btn-update"
+              value="update"
+              fdprocessedid="ic1j3bq"
+            />
+            <a href="add-product.html" class="option-btn">Go Back.</a>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
