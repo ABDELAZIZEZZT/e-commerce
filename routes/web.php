@@ -32,8 +32,11 @@ Route::middleware(['guest'])->group(function () {
 
     Route::get('/reset/view', function () { return view('reset');});
 
+    Route::post('/verify/account', [AuthController::class, 'verify'])->name('verify.account');
+
 
     Route::post('/sent-email', [emailcontroller::class, 'reset'])->name('reset');
+
 
 
 });
@@ -82,7 +85,7 @@ Route::middleware(['admin'])->group(function () {
 
     /////////////////////////////////
     Route::get('admin/message', [admincontroller::class,'message'])->name('admin.message');
-
+//    Route::get('/user/create', [\App\Observers\userObserver::class,'created'])->name('create.user');
 
 });
 

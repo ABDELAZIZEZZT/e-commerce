@@ -21,7 +21,7 @@ class userController extends Controller
     }
 
     function home(){
-        $product=product::where('stock','>','0')->paginate('10');
+        $product=product::all();
         $category=category::all();
 
         return view('home',['products'=>$product,'categories'=>$category]);
